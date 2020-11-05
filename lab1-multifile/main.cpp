@@ -59,7 +59,7 @@ int main () {
     TH1F *hInvMassDiscordant = new TH1F ("hInvMassDiscordant", "Mass Invariant - Discordant Particles", nBins, 0, 5);
     TH1F *hInvMassPKdiscordant = new TH1F ("hInvMassPKdiscordant", "Mass Invariant - discordant p and k ", nBins, 0, 5);
     TH1F *hInvMassPKconcordant = new TH1F ("hInvMassPKconcordant", "Mass Invariant - concordant p and k", nBins, 0, 5);
-    TH1F *hInvMassKstarDecay = new TH1F ("hInvMassKstarDecay", "Mass Invariant of p and k from decays", nBins, 0, 2);
+    TH1F *hInvMassKstarDecay = new TH1F ("hInvMassKstarDecay", "Mass Invariant of p and k from decays", nBins, 0.6, 1.3);
     
     hInvMass->Sumw2();
     hInvMassConcordant->Sumw2();
@@ -155,37 +155,6 @@ int main () {
             }
         }
  }
-  /*      c1->cd(1);
-    hProportions->Draw();
-        c1->cd(2);
-    hAzimuthal->Draw();
-        c1->cd(3);
-    hPolar->Draw();
-        c1->cd(4);
-    hTransverseMomentum->Draw();
-        c1->cd(5);
-    hEnergy->Draw();
-        c1->cd(5);
-    hMomentum->Draw();
-        c2->cd(1);
-    hInvMass->Draw();
-        c2->cd(2);
-    hInvMassConcordant->Draw();
-        c2->cd(3);
-    hInvMassDiscordant->Draw();
-        c2->cd(4);
-    hInvMassPKconcordant->Draw();
-        c2->cd(5);
-    hInvMassPKdiscordant->Draw();
-        c2->cd(6);
-    hInvMassKstarDecay->Draw();
-    
-    std::cout << '\n';
-      c1->Print("c1.pdf", "pdf");
-      c2->Print("c2.pdf", "pdf");
-    std::cout << '\n'; */
-    
-    
 
     file->Write();
     file->Close();
